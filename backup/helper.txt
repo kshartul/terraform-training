@@ -1,0 +1,19 @@
+terraform plan -var "ami-string=ami-0e347b9ca0ace12d"   -- N Virgina
+
+terraform apply -var "ami-string=ami-0e347b9ca0ace12d"   --
+
+
+
+
+terraform plan -var "ami-string=ami-0518bb0e75d3619ca"   -- Oregon 
+
+terraform apply -var "ami-string=ami-0518bb0e75d3619ca"   -- Oregon 
+
+terraform destroy -var "ami-string=ami-0518bb0e75d3619ca"   -- Oregon 
+
+
+terraform init -var "ami-string=ami-0518bb0e75d3619ca" 
+
+file("example/var.tf")
+
+file("example-createmodule/variables.tf")

@@ -1,0 +1,22 @@
+full-access
+
+
+Open command prompt and fire this: set GOOGLE_APPLICATION_CREDENTIALS= /path/to/your/credentials.json (its best to put it in the same folder as google cloud sdk
+
+2) gcloud auth login ( a webpage will be opened saying you are authenticated after you login in to your google account)
+
+3) gcloud config set project learning-gcp-185425
+
+4) gcloud auth activate-service-account YOUR SERVICE ACCOUNT@projectID.iam.gserviceaccount.com
+   
+   gcloud auth activate-service-account full-access@learning-gcp-185425.iam.gserviceaccount.com
+
+
+5) gcloud projects add-iam-policy-binding learning-gcp-185425 --member="full-access" --role="roles/servicemanagement.serviceConsumer" (the service account you used in step 4)
+
+6)gcloud projects add-iam-policy-binding YOUR PROJECT_ID --member user: (the email you have affiliated to your gcloud account)
+
+7) Done.'
+
+
+gcloud services enable servicenetworking.googleapis.com --project=learning-gcp-185425
