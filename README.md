@@ -1,2 +1,2 @@
-# terraform-traning
+# terraform-training
 MultiCloud Infrastructure as Code with Terraform
